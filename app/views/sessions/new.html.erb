@@ -1,13 +1,15 @@
+<html>
 
-
-<div class = "box1">
+<div class = "box_text1a">
 	<h1>Log in.</h1>
 
 <%= form_for :session, :url => sessions_path do |f| %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
+  Email: <%= f.text_field :email %> 
+ Password: <%= f.password_field :password %> 
   <%= f.submit "Login" %>
 <% end %>
 
 </div>
+
+</html>
 
