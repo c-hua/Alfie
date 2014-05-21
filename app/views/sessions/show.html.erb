@@ -1,5 +1,6 @@
-<div class = "box_text1">
+<div class = "box_text1a">
 
+<div class = "formfont">
 <h1>Please log-in.</h1>
 
 <%= form_for :session, :url => sessions_path do |f| %>
@@ -7,5 +8,6 @@
   Password: <%= f.password_field :password %>
   <%= f.submit "Login" %>
 <% end %>
+</div>
 
 </div>
