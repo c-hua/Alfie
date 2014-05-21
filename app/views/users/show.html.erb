@@ -4,19 +4,26 @@
 	</h1>
 	<h1> <%= (Time.now.hour - 12) %>:<%= (Time.now.min )%> </h1> 
 	<h3> <%= Time.now.month %>.<%= Time.now.day %>.<%= Time.now.year%>.</h3>
+	<a href="#box2"><div id="arrow"></div></a>
 </div>
 
 
 </div> 
 
 <div class = "box2"> 
-	<h3> You have <br /> <h1> <%= @user.tasks.count %> </h1> <br /> tasks left to complete. </h3>
+	<div class = "box_text2">
+	<h1> You have <h1> <%= @user.tasks.count %> </h1> tasks left to complete. </h1>
+	<a href="#box3"><div id="arrow"></div></a>
+</div>
 </div>
 
 
 <div class = "box3">
+	<div class = "box_text3">
 
-	<h2> You have <br /><h1><%= @user.points %> </h1> <br /> points. </h2>
+	<h4> You have <h1><%= @user.points %> </h1>  points. </h4>
+	<a href="#box1"><div id="arrow"></div></a>
+</div>
 </div>
 
 <%= link_to "Your Profile", edit_user_path(current_user) %>
