@@ -77,6 +77,13 @@ body {
 .box_text2 {
   margin-top: 200px;
   font-size: 130px;
+
+}
+
+.box_text2a {
+  margin-top: 200px;
+  font-size: 30px;
+
 }
 
 .box3 {
@@ -94,6 +101,11 @@ body {
 .box_text3 {
   margin-top: 200px;
   font-size: 130px;
+}
+
+.box_text3a {
+  margin-top: 200px;
+  font-size: 30px;
 
 }
 
@@ -139,33 +151,13 @@ h4 {
 
 
 
- #wrapper1 {
- background-color: black; 
- }
-
- #abandoned {
- /* position: absolute;*/
-  top: 0;
-  z-index: -1000;
-  margin: 0 auto;
-  width: 100%;
- }
-
-/*#video1 {
- width: auto;    
-height: 100%;
-
-}
-
-#video_background {
-  position: fixed;
-  background-image: url("abandoned.mp4");
- 
-  z-index: -1000;
-}*/
 
 
-video { display: block; } /* for IE users */
+
+
+
+
+
 
 /* modifying the comment bubbles */
 

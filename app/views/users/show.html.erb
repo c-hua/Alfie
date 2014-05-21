@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 <div class = "box2"> 
 	<div class = "box_text2">
-	<h1> You have <h1> <%= @user.tasks.count %> </h1> tasks left to complete. </h1>
+	<h4> You have </h4> <h1> <%= @user.tasks.count %> </h1> <h4> tasks left to complete. </h4>
 	<a href="#box3"><div id="arrow"></div></a>
 </div>
 </div>
@@ -49,9 +49,8 @@ $(document).ready(function(){
 <div class = "box3">
 	<div class = "box_text3">
 
-	<h4> You have <h1><%= @user.points %> </h1>  points. </h4>
-	<a href="#box1ls
-	"><div id="arrow"></div></a>
+	<h3> You have </h3> <h1><%= @user.points %> </h1> <h3>  points. </h3>
+	<a href="#box1ls"><div id="arrow"></div></a>
 </div>
 </div>
 
