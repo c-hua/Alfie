@@ -22,6 +22,23 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('a[href="#box3"]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
+
 </script>
 
 </head>
@@ -38,7 +55,7 @@ $(document).ready(function(){
 
 </div> 
 
-<div class = "box2"> 
+<div id = "box2"> 
 	<div class = "box_text2">
 	<h4> You have </h4> <h1> <%= @user.tasks.count %> </h1> <h4> tasks left to complete. </h4>
 	<a href="#box3"><div id="arrow"></div></a>
@@ -46,7 +63,7 @@ $(document).ready(function(){
 </div>
 
 
-<div class = "box3">
+<div id = "box3">
 	<div class = "box_text3">
 
 	<h3> You have </h3> <h1><%= @user.points %> </h1> <h3>  points. </h3>
