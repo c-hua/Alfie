@@ -4,11 +4,12 @@
 	<h4>Are you a new user?</h4>
 
 <div class="signup_container">
-	<div class = "formfont">
+	
 <%= form_for @user do |f| %>
-  Name: <%= f.text_field :name %> <br />
-  Email: <%= f.text_field :email %> <br />
-  Password: <%= f.password_field :password %>
+  Name: <div class = "formfont"> <%= f.text_field :name %> <br /> </div>
+  Email: <div class = "formfont"> <%= f.text_field :email %> <br /> </div>
+  Password: <div class = "formfont"> <%= f.password_field :password %> </div>
+  <br />
   
   <%= f.submit %>
 </div>
