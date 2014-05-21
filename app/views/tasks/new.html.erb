@@ -26,6 +26,8 @@ $(document).ready(function(){
 
 </head>
 
+<div class = "box1">
+
 <h2>Would you like to <br />
 <h1> add a new task ?</h1> </h2>
 <%= form_for(@task) do |f| %>
@@ -36,6 +38,8 @@ $(document).ready(function(){
       <ul>
       <% @task.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
+
+      </div>
       <% end %>
       </ul>
     </div>
