@@ -3,9 +3,10 @@
 <div class = "box_text1a">
 	<h1>Log in.</h1>
 
+
 <%= form_for :session, :url => sessions_path do |f| %>
-  Email: <%= f.text_field :email %> 
- Password: <%= f.password_field :password %> 
+  Email: <div class = "formfont"> <%= f.text_field :email %>  </div>
+ Password: <div class = "formfont"> <%= f.password_field :password %> </div> <br />
   <%= f.submit "Login" %>
 <% end %>
 
