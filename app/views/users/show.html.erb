@@ -1,0 +1,38 @@
+<div class = "box1">
+	<h1><%= greeting_time %> <%= @user.name.capitalize %>. </h4>
+	</h1>
+	<h3> <%= Time.now.month %>.<%= Time.now.day %>.<%= Time.now.year%>.</h3>
+
+</div> 
+
+<div class = "box2"> 
+	<h3> You have <br /> <h1> <%= @user.tasks.count %> </h1> <br /> tasks left to complete. </h3>
+</div>
+
+
+<div class = "box3">
+
+	<h2> You have <br /><h1><%= @user.points %> </h1> <br /> points. </h2>
+</div>
+
+<%= link_to "Your Profile", edit_user_path(current_user) %>
+
+<%= render partial: "layouts/file1" %>
+<%= render partial: "layouts/file2" %>
+
+
+
+<!-- time now -> 
+
+
+	, <%= @user.name %> :)</h1> ... NEED TO FIX DUE DATE/PRIORITY SORTING... JQUERY CALENDAR
+<h1> You are level <%= @user.level %> </h1>
+<h1> You have <%= @user.points %> points. </h1>
+<h1> You have <%= @user.tasks.count %> tasks. </h1>
+<h3>TASKS <%= @user.tasks %></h3>
+<h3>PRIORITY: <%= @task %></h3>
+<h3>DATE: <%= @task %></h3>
+<h3>COMPLETED: <%= @task %></h3>
+
+
+<%= link_to "Edit", edit_user_path(@user), class: 'btn btn-primary' %>

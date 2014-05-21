@@ -1,0 +1,122 @@
+<html>
+<head>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="http://www.seanmccambridge.com/tubular/js/jquery.tubular.1.0.js"></script>
+  // <script> -->
+
+
+
+
+
+ 
+
+
+
+</script>
+</head>
+
+<body>
+
+
+
+
+
+<% if @show_uncompletes %>
+
+  <h1>- Your current tasks. -</h1>
+
+<tbody class="table-hover">
+  <ul class='list-group'>
+    <% @tasks.each do |task| %>
+
+      <% if !task.is_completed %>
+
+        <li class="list-group-item">
+          <%= task.name %>
+          <%= task.priority %>
+          <%= task.deadline %>
+         
+          <%= task.is_completed %>
+          <span class="links">
+            <%= link_to 'Edit', edit_task_path(task) %>
+            <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </span>
+        </li>
+      </tbody>
+
+      <% end %>
+
+    <% end %>
+  </ul>
+<% end %>
+
+<br>
+
+<h1><%= @add %></h1>
+
+<% if @show_all %>
+  <ul class='list-group'>
+    <% @tasks.each do |task| %>
+        <li class="list-group-item">
+          <%= task.name %>
+          <%= task.priority %>
+          <%= task.deadline %>
+          <%= task.time %>
+          <%= task.is_completed %>
+          <span class="links">
+            <%= link_to 'Edit', edit_task_path(task) %>
+            <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </span>
+        </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'New Task', new_task_path, class: "button"%>
+<br>
+<br>
+Would you like to see all of your items, included the ones you finished?
+<br>
+<div>
+
+<div class="btn-group">
+  <%= link_to 'SHOW EVERYTHING', tasks_path(show_all: "true"), class: 'btn btn-primary' %>
+  <%= link_to 'SHOW TO-DOS', tasks_path, class: 'btn btn-primary' %>
+</div>
+<!-- adds ? -->
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+<div class="rowheader"> <!-- transform:rotate(0deg);" data-500="background-color:rgb(255,0,0);transform:rotate(360deg);"> -->
+<!--   <div id="titleb"><h1 class="header"> G O O D  <span class="title">M O R N I N G ! </span></h1></div> -->
+
+
+
+</div>
+</div>
+
+    
+    
+  
+   
+
+  </div>
+</div>
+</div>
+
+
+</div>
+
+
+
+</body>

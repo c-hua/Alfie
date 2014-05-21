@@ -1,0 +1,18 @@
+<h1>SHOW :)</h1>
+<h3>Here are today's tasks. </h3>
+
+<h3>You have <%= @task.name.count %> tasks to complete. </h3>
+
+<%= @task.name.each do |t| %>
+	<li> <%= t.name %> </li>
+	<h3>PRIORITY: <%= @t.priority %></h3>
+	<h3>DATE: <%= @t.date %></h3>
+	<h3>COMPLETED: <%= @t.is_completed %></h3>
+<% end %>
+
+
+
+
+  
+
+ 

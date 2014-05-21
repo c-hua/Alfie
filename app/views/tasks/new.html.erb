@@ -1,0 +1,42 @@
+<h2>Would you like to <br />
+<h1> add a new task ?</h1> </h2>
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label "What's your task?"%><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Priority Level" %><br>
+    <%= f.number_field :priority %>
+  </div>
+    <div class="field">
+    <%= f.label "When is it due?" %><br>
+    <%= f.date_select :deadline %>
+  </div>
+    <div class="field">
+    <%= f.label "What time would you like to schedule this in?" %><br>
+    <%= f.time_select :time%>
+  </div>
+  <div class="field">
+    <%= f.label "Did you already finish this?" %><br>
+    <%= f.check_box :is_completed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<br><br>
+Params hash is: <%= params %>

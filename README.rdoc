@@ -1,0 +1,12 @@
+== README
+
+Alfie is an anti-procrastination to-do list game built in Ruby on Rails. 
+
+Built by:
+Christie Hua
+General Assembly
+Los Angeles
+May 2014
+
+
+
