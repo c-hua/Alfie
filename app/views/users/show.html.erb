@@ -1,3 +1,31 @@
+
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://www.seanmccambridge.com/tubular/js/jquery.tubular.1.0.js"></script>
+	<script> 
+
+$(document).ready(function(){
+  $('a[href="#box2"]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
+
+</script>
+
+</head>
+
 <div class = "box1">
 	<div class = "box_text1"
 	<h1><%= greeting_time %> <%= @user.name.capitalize %>. </h4>
@@ -22,7 +50,8 @@
 	<div class = "box_text3">
 
 	<h4> You have <h1><%= @user.points %> </h1>  points. </h4>
-	<a href="#box1"><div id="arrow"></div></a>
+	<a href="#box1ls
+	"><div id="arrow"></div></a>
 </div>
 </div>
 
@@ -31,7 +60,7 @@
 <%= render partial: "layouts/file1" %>
 <%= render partial: "layouts/file2" %>
 
-
+</html>
 
 <!-- time now -> 
 
@@ -48,3 +77,4 @@
 
 
 <%= link_to "Edit", edit_user_path(@user), class: 'btn btn-primary' %>
+
