@@ -23,16 +23,19 @@
 
 
 body {
-	background-image: url("boats.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
   font-family: 'Merriweather Sans', sans-serif;
-  color: black;
+  color: white;
+  margin: 50px auto;
 }
 
+.box1 {
+  background-image: url("blue.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
 h1 { 
 	text-align: center;
-  font-size: 70px;
+  font-size: 90px;
   ffont-family: 'Merriweather Sans', sans-serif;
 }
 
