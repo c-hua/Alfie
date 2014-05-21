@@ -110,9 +110,18 @@ body {
 
 h1 { 
 	text-align: center;
-  font-size: 90px;
+  font-size: 100px;
   font-family: 'Merriweather Sans', sans-serif;
+     -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
 }
+
+ h1:hover {
+  font-size: 130px;
+         }
 
 h2 {
   text-align: center;
@@ -294,7 +303,7 @@ behavior: url(folder/PIE.htc); /*location of PIE.htc on your server*/
  width: 100px;
  height: 100px;
  margin: 0 auto;
- background-image: url("downarrow.png");
+ background-image: url("whitearrow.gif");
  filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
