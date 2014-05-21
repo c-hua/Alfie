@@ -2,7 +2,7 @@
 	<h1><%= greeting_time %> <%= @user.name.capitalize %>. </h4>
 	</h1>
 	<h3> <%= Time.now.month %>.<%= Time.now.day %>.<%= Time.now.year%>.</h3>
-	<h3> <%= Time.now.hour %>:<%= Time.now.min%> </h3>
+	<h3> <%= (Time.now.hour - 12) %>:<%= Time.now.min%> </h3> 
 
 </div> 
 
@@ -34,6 +34,7 @@
 <h3>PRIORITY: <%= @task %></h3>
 <h3>DATE: <%= @task %></h3>
 <h3>COMPLETED: <%= @task %></h3>
+
 
 
 <%= link_to "Edit", edit_user_path(@user), class: 'btn btn-primary' %>

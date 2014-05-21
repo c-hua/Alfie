@@ -21,5 +21,13 @@ class ApplicationController < ActionController::Base
         @greeting = "Good evening, "
     end
  end
+
+    def AM_PM
+      if (Time.now.hour >= 0) && (Time.now.hour <12)
+        @am_pm = "AM"
+      else
+        @am_pm = "PM"
+      end
+    end 
   
 end
