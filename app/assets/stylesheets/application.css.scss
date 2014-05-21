@@ -45,6 +45,10 @@ h3 {
   font-size: 35px;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 h4 {
   font-size: 35px;
   text-align: center;
@@ -232,7 +236,7 @@ behavior: url(folder/PIE.htc); /*location of PIE.htc on your server*/
  width: 100px;
  height: 100px;
  margin: 0 auto;
- background-image: url("blackarrow.gif");
+ background-image: url("downarrow.png");
  filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
