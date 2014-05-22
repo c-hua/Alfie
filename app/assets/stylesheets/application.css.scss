@@ -34,6 +34,15 @@ body {
  
 }
 
+.task_bg {
+  background-image: url("blue.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+
+}
+
 .box1 {
   background-image: url("blue.jpg");
   background-position: center;
@@ -46,9 +55,13 @@ body {
 
 }
 
+.black {
+  color:black
+}
+
 .box_text1 {
   margin-top: 200px;
-  font-size: 130px;
+  font-size: 90px;
 
 }
 
@@ -73,10 +86,30 @@ body {
   display: inline-block;
 }
 
+.blurred2 {
+  background-image: url("sunset.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
 .box_text2 {
   margin-top: 200px;
   font-size: 130px;
 
+}
+
+.box_text2a {
+  margin-top: 300px;
+}
+
+#task_name {
+  width: 10%;
+  height: 10%;
 }
 
 .box_text2a {
@@ -87,6 +120,61 @@ body {
 
 #box3 {
   background-image: url("clouds.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+#box4 {
+  background-image: url("01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+#box5 {
+  background-image: url("10.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+#box6 {
+  background-image: url("06.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+#box7 {
+  background-image: url("09.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+#box8 {
+  background-image: url("10.jpg");
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;

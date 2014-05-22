@@ -49,8 +49,9 @@ $(document).ready(function(){
 	<div class = "box_text1">
 	<h1><%= greeting_time %> <%= @user.name.capitalize %>. </h4>
 	</h1>
-	<h1> <%= (Time.now.hour) %12 %>:<%= (Time.now.min )%> </h1> 
-	<h3> <%= Time.now.month %>.<%= Time.now.day %>.<%= Time.now.year%>.</h3>
+	<!-- <h1> <%= (Time.now.hour) %12 %>:<%= (Time.now.min) %> </h1> -->
+	<h1> <%= Time.now.strftime("%l:%M %p") %> </h1>
+	<h3> <%= Time.now.month %>.<%= Time.now.day %>.<%= Time.now.year%></h3>
 	<a href="#box2"><div id="arrow"></div></a>
 </div>
 

@@ -6,7 +6,7 @@
   <script>
 
 $(document).ready(function(){
-  $('a[href="#field_b"]').click(function() {
+  $('a[href="#box5"]').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
       var $target = $(this.hash);
@@ -22,6 +22,78 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('a[href="#box7"]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
+
+$(document).ready(function(){
+  $('a[href="#box8"]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
+
+$(document).ready(function(){
+  $('a[href="#box6"]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
+
+$(document).ready(function(){
+  $('a[href="#field_a"]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
+
+$('button').click(function() {
+   $('div').slideToggle(); 
+});
+
 </script>
 
 </head>
@@ -33,6 +105,7 @@ $(document).ready(function(){
 
 <h2>Would you like to <br />
 <h1> add a new task ?</h1> </h2>
+<a href="#field_a"><div id="arrow"></div></a>
 <%= form_for(@task) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
@@ -41,7 +114,7 @@ $(document).ready(function(){
       <ul>
       <% @task.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-
+        <a href="#field_b"><div id="arrow"></div></a>
       </div>
       <% end %>
       </ul>
@@ -50,43 +123,62 @@ $(document).ready(function(){
   <% end %>
 </div>
 
-<div class="blurred2">
+<div class="blurred 2">
 
- <div class="field_a">
-  <div class = "box_text1">
-  <div class="box2">
+ <div id="field_a">
+ 
 
+  <div id="box4">
+     <div class = "box_text1">
     <%= f.label "What's your task?"%><br>
     <div class = "formfont">
     <%= f.text_field :name %>
-    <a href="#field_b"><div id="arrow"></div></a>
+    <a href="#box5"><div id="arrow"></div></a>
   </div>
 </div>
 </div>
 </div>
 
   </div>
-  <div class="field_b ">
+  <div id="field_b ">
+    <div id="box5">
+      <div class = "box_text1">
     <%= f.label "Priority Level" %><br>
+    <div class ="formfont">
     <%= f.number_field :priority %>
-    <a href="#field_c"><div id="arrow"></div></a>
+    <a href="#box6"><div id="arrow"></div></a>
   </div>
+</div>
+  </div>
+  <div id = "box6">
+    <div class = "box_text1">
     <div class="field_c ">
     <%= f.label "When is it due?" %><br>
     <%= f.date_select :deadline %>
-    <a href="#field_d"><div id="arrow"></div></a>
+    <a href="#box7"><div id="arrow"></div></a>
   </div>
+</div>
+<div id = "box7">
+  <div class = "box_text1">
     <div class="field_d ">
-    <%= f.label "What time would you like to schedule this in?" %><br>
+    <%= f.label "What time are you doing it?" %><br>
     <%= f.time_select :time%>
-    <a href="#hidden_e"><div id="arrow"></div></a>
+    <a href="#box8"><div id="arrow"></div></a>
   </div>
+</div>
+</div>
+  <div id = "box8">
+    <div class = "box_text1">
   <div class="field_e">
-    <%= f.label "Did you already finish this?" %><br>
+    <%= f.label "Already done?" %><br>
     <%= f.check_box :is_completed %>
   </div>
+</div>
   <div class="actions">
+    <div class = "formfont">
     <%= f.submit %>
+  </div>
+  </div>
   </div>
   </div>
 <% end %>

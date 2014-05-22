@@ -8,7 +8,7 @@ class Task
   field :deadline, type: Time
   field :is_completed, type: Mongoid::Boolean
   field :already_tallied, type: Mongoid::Boolean, default: false
-  field :points, type:Integer
+  field :points, type:Integer, default: 0
 
 
   # validates_inclusion_of :transmission, in:["auto","manual"]

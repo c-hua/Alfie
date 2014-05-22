@@ -65,12 +65,15 @@ class TasksController < ApplicationController
   end
 
   def destroy
-	@task = current_user.tasks.find(params[:id])
-    @task.destroy 
+	  @task = current_user.tasks.find(params[:id])
+    # raise @task.user.id.to_s
+    
     @task.user.points-=@task.points
-      if @user.points
-		redirect_to tasks_url
-  end
+    @task.delete
+    current_user.save
+    if current_user.points
+		  redirect_to tasks_url
+    end
   end
 
   private

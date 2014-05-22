@@ -35,11 +35,14 @@
       <% if !task.is_completed %>
 
         <li class="list-group-item">
-          <%= task.name %>
-          <%= task.priority %>
-          <%= task.deadline %>
-         
           <%= task.is_completed %>
+          <%= task.priority %>
+          <%= task.name %>
+          <%= task.deadline %>
+          
+          
+         
+      
           <span class="links">
             <%= link_to 'Edit', edit_task_path(task) %>
             <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -64,11 +67,12 @@
   <ul class='list-group'>
     <% @tasks.each do |task| %>
         <li class="list-group-item">
-          <%= task.name %>
-          <%= task.priority %>
-          <%= task.deadline %>
-          <%= task.time %>
           <%= task.is_completed %>
+          <%= task.priority %>
+          <%= task.name %>
+          <%= task.deadline %>
+     
+          
           <span class="links">
             <%= link_to 'Edit', edit_task_path(task) %>
             <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>

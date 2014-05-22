@@ -35,26 +35,26 @@ class User
 
   def tally_points
     self.tasks.each do |task|
-      if task.deadline > Time.now
+      if task.deadline > Time.now && task.already_tallied == false
         point_change = 0
         if task.is_completed && task.already_tallied == false
-          if priority = 1
+          if task.priority == 1
             point_change = 1000
-          elsif priority = 2
+          elsif task.priority == 2
             point_change = 700
-          elsif priority = 3
+          elsif task.priority == 3
             point_change = 500
           # task.is_completed.push
         else
-          point_change = -700
-        
+          point_change = -700        
         end
+        # task already tallied
         task.already_tallied = true
         self.points += point_change
         task.update(points: point_change)
-
+        task.user.save
+      end
     end
-  end
 
     self.save
   end 
