@@ -1,8 +1,10 @@
 
 <html>
 <head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script src="http://www.seanmccambridge.com/tubular/js/jquery.tubular.1.0.js"></script>
+	<script src="dropit.js"></script>
 	<script> 
 
 $(document).ready(function(){
@@ -47,7 +49,7 @@ $(document).ready(function(){
 	<div class = "box_text1">
 	<h1><%= greeting_time %> <%= @user.name.capitalize %>. </h4>
 	</h1>
-	<h1> <%= (Time.now.hour - 12) %>:<%= (Time.now.min )%> </h1> 
+	<h1> <%= (Time.now.hour) %12 %>:<%= (Time.now.min )%> </h1> 
 	<h3> <%= Time.now.month %>.<%= Time.now.day %>.<%= Time.now.year%>.</h3>
 	<a href="#box2"><div id="arrow"></div></a>
 </div>

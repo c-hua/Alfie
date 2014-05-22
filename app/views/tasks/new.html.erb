@@ -26,6 +26,8 @@ $(document).ready(function(){
 
 </head>
 
+<div class="task_bg">
+
 <div class = "box1">
 <div class = "box_text1a">
 
@@ -46,33 +48,42 @@ $(document).ready(function(){
     </div>
   </div>
   <% end %>
+</div>
 
-<div class = "formfont">
+<div class="blurred2">
+
  <div class="field_a">
+  <div class = "box_text1">
+  <div class="box2">
+
     <%= f.label "What's your task?"%><br>
+    <div class = "formfont">
     <%= f.text_field :name %>
-    <a href="#field_b hidden"><div id="arrow"></div></a>
+    <a href="#field_b"><div id="arrow"></div></a>
+  </div>
+</div>
+</div>
+</div>
 
   </div>
-  <div class="field_b hidden">
+  <div class="field_b ">
     <%= f.label "Priority Level" %><br>
     <%= f.number_field :priority %>
-    <a href="#field_c hidden"><div id="arrow"></div></a>
+    <a href="#field_c"><div id="arrow"></div></a>
   </div>
-    <div class="field_c hidden">
+    <div class="field_c ">
     <%= f.label "When is it due?" %><br>
     <%= f.date_select :deadline %>
-    <a href="#field_d hidden"><div id="arrow"></div></a>
+    <a href="#field_d"><div id="arrow"></div></a>
   </div>
-    <div class="field_d hidden">
+    <div class="field_d ">
     <%= f.label "What time would you like to schedule this in?" %><br>
     <%= f.time_select :time%>
-    <a href="#hidden_e hidden"><div id="arrow"></div></a>
+    <a href="#hidden_e"><div id="arrow"></div></a>
   </div>
-  <div class="field_e hidden">
+  <div class="field_e">
     <%= f.label "Did you already finish this?" %><br>
     <%= f.check_box :is_completed %>
-    <a href="#actions"><div id="arrow"></div></a>
   </div>
   <div class="actions">
     <%= f.submit %>
@@ -81,5 +92,6 @@ $(document).ready(function(){
 <% end %>
 
 <br><br>
+</div>
 <!-- Params hash is: <%= params %> -->
 </html>
