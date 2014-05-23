@@ -1,63 +1,47 @@
-<html>
-<head>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <!-- <script src="http://www.seanmccambridge.com/tubular/js/jquery.tubular.1.0.js"></script>
-  // <script> -->
-
-
-
-
-
- 
-
-
-
-</script>
-</head>
-
-<body>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <div class = "box1">
   <div class = "box_text1a">
+    <% if @show_uncompletes %>
 
+      <h1>- Your current tasks. -</h1>
 
-<% if @show_uncompletes %>
-
-  <h1>- Your current tasks. -</h1>
-  <div class = "formfont">
-
-<tbody class="table-hover">
-  <ul class='list-group'>
-    <% @tasks.each do |task| %>
-
-      <% if !task.is_completed %>
-
-        <li class="list-group-item">
-          <%= task.is_completed %>
-          <%= task.priority %>
-          <%= task.name %>
-          <%= task.deadline %>
-          
-          
-         
-      
-          <span class="links">
-            <%= link_to 'Edit', edit_task_path(task) %>
-            <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </span>
-        </li>
-      </tbody>
-
-    </div>
-  </div>
-
-      <% end %>
-
+      <div class = "formfont">
+      <table class=".table table-hover bordered">
+        
+        <div class="row">
+          <ul class='list-group'>
+            <% @tasks.each do |task| %>
+              <% if !task.is_completed %>
+                  <div class = "row">
+                     <div class="col-xs-2">
+                      <%= task.is_completed %>
+                    </div>
+                      <div class="col-xs-2">
+                      <%= task.priority %>
+                    </div>
+                      <div class="col-xs-2">
+                      <%= task.name %>
+                    </div>
+                      <div class="col-xs-2">
+                      <%= task.deadline %>
+                    </div>
+                      <span class="links">
+                        <%= link_to 'Edit', edit_task_path(task) %>
+                        <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </span>
+                  </li>
+                </div>
+              </div>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </table>
     <% end %>
-  </ul>
-<% end %>
+
+
+
 
 <br>
 
@@ -76,56 +60,32 @@
           <span class="links">
             <%= link_to 'Edit', edit_task_path(task) %>
             <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </span>
-        </li>
-    <% end %>
-  </ul>
-<% end %>
+            </span>
+          </li>
+        <% end %>
+      </ul>
+      <% end %>
 
-<%= link_to 'New Task', new_task_path, class: "button"%>
-<br>
-<br>
-Would you like to see all of your items, included the ones you finished?
-<br>
-<div>
+    <%= link_to 'New Task', new_task_path, class: "button"%>
+    <br>
+    <br>
+    Would you like to see all of your items, included the ones you finished?
+    <br>
+    <div>
 
-<div class="btn-group">
-  <%= link_to 'SHOW EVERYTHING', tasks_path(show_all: "true"), class: 'btn btn-primary' %>
-  <%= link_to 'SHOW TO-DOS', tasks_path, class: 'btn btn-primary' %>
-</div>
+    <div class="btn-group">
+      <%= link_to 'SHOW EVERYTHING', tasks_path(show_all: "true"), class: 'btn btn-primary' %>
+      <%= link_to 'SHOW TO-DOS', tasks_path, class: 'btn btn-primary' %>
+    </div>
 <!-- adds ? -->
-</div>
-
-
-
-
-
-
-
-
-
-  
-
-<div class="rowheader"> <!-- transform:rotate(0deg);" data-500="background-color:rgb(255,0,0);transform:rotate(360deg);"> -->
+    </div>
+      <div class="rowheader"> <!-- transform:rotate(0deg);" data-500="background-color:rgb(255,0,0);transform:rotate(360deg);"> -->
 <!--   <div id="titleb"><h1 class="header"> G O O D  <span class="title">M O R N I N G ! </span></h1></div> -->
-
-
-
+      </div>
 </div>
-</div>
-
-    
-    
-  
-   
-
   </div>
 </div>
 </div>
 
 
 </div>
-
-
-
-</body>
